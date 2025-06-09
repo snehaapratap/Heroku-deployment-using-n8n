@@ -1,9 +1,7 @@
 # Heroku deployment using n8n
 
 
-[![Docker](https://github.com/sarveshpro/n8n-heroku/workflows/Docker/badge.svg)](https://github.com/sarveshpro/n8n-heroku/actions) [![Heroku](https://github.com/sarveshpro/n8n-heroku/workflows/Heroku/badge.svg)](https://github.com/sarveshpro/n8n-heroku/actions)
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/)
 
 ## 🚀 Overview
 
