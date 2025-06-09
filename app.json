@@ -1,0 +1,68 @@
+{
+  "name": "n8n",
+  "description": "deploy n8n to heroku without any hassle",
+  "keywords": ["n8n", "node", "automation"],
+  "website": "https://n8n.io",
+  "repository": "https://github.com/sarveshwarge/n8n-heroku",
+  "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/editor-ui/public/favicon-32x32.png",
+  "success_url": "/",
+  "stack": "container",
+  "env": {
+    "GENERIC_TIMEZONE": {
+      "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
+      "value": "Europe/Berlin"
+    },
+    "N8N_ENCRYPTION_KEY": {
+      "description": "This is to set the n8n encryption key to a static value, so that heroku doesnt override it, causing AUTH to fail",
+      "value": "change-me-to-something-else"
+    },
+    "PGSSLMODE": {
+      "description": "Heroku made a change so SSL is required to connect to Postgres",
+      "value": "no-verify"
+    },
+    "DB_POSTGRESDB_SSL_ENABLED": {
+      "description": "Introduced since n8n@1.11.1 to connect to Postgres with SSL.",
+      "value": "true"
+    },
+    "NODE_TLS_REJECT_UNAUTHORIZED": {
+      "description": "Heroku SSL is self signed, SSL fails if this is not set to 0",
+      "value": "0"
+    },
+    "WEBHOOK_URLQUEUE_BULL_REDIS_TLS": {
+      "description": "Your app could be published to any domain, without specifying n8n will think that it's hosted on localhost (and it could break some scenarions ",
+      "value": "https://<appname>.herokuapp.com"
+    },
+    "QUEUE_BULL_REDIS_TLS": {
+      "description": "Heroku is enforcing TLS on all redis mini plans starting December 2024.",
+      "value": "true"
+    },
+    "EXECUTIONS_MODE": {
+      "description": "Supports: regular, queue. Queue Mode enables Worker Dyno to process events. If you do not plan on using worker dyno, set worker dyno count to 0 and set execution mode it to regular.",
+      "value": "queue"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "14"
+      }
+    },
+    {
+      "plan": "papertrail:choklad"
+    },
+    {
+      "plan": "heroku-redis:hobby-dev"
+    }
+  ]
+}
