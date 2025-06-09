@@ -1,4 +1,4 @@
-# Heroku deployment using n8n
+# n8n deployment using Heroku
 
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/)
@@ -35,8 +35,8 @@ This repository provides a streamlined way to deploy [n8n](https://n8n.io/) - a 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/snehaapratap/Heroku-deployment-using-n8n.git
-   cd Heroku-deployment-using-n8n
+   git clone https://github.com/snehaapratap/n8n-deployment-using-Heroku.git
+   cd n8n-deployment-using-Heroku
    ```
 
 2. Create a new Heroku app:
