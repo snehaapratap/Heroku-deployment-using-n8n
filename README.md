@@ -88,28 +88,5 @@ The deployment includes:
 
 - [n8n Documentation](https://docs.n8n.io/)
 - [Heroku Documentation](https://devcenter.heroku.com/)
-- [Redis Documentation](https://redis.io/documentation)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [n8n](https://n8n.io/) for the amazing workflow automation tool
-- [Heroku](https://heroku.com) for the hosting platform
-- All contributors who have helped improve this project
-
----
 
 ⭐ Star this repository if you find it useful!
